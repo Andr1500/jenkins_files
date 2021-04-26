@@ -3,7 +3,7 @@ pipeline {
     
     environment {
         PROJECT_NAME = "Name"
-        OWNER_NAME = "A1500"
+        OWNER_NAME = "zzz"
     }
     
     stages {
