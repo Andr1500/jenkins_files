@@ -1,0 +1,28 @@
+pipeline {
+    agent any
+    
+    environment {
+        PROJECT_NAME = "Name"
+        OWNER_NAME = "zzz"
+    }
+    
+    stages {
+        stage('1.Build') {
+            steps {
+                echo "build..."
+            }
+        }
+        stage('2.Test') {
+            steps {
+                echo "test..."
+                echo "Hello ${OWNER_NAME}"
+                shell "pyhon --version"
+            }
+        }
+        stage('3.Deploy') {
+            steps {
+                echo "deploy..."
+            }
+        }
+    }
+}
